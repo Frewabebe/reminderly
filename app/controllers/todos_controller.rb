@@ -18,6 +18,16 @@ class TodosController < ApplicationController
     redirect_to @todo
   end
 
+  def edit
+    @todo = Todo.find(params[:id])
+  end
+
+  def update
+    @todo = Todo.find(params[:id])
+    @todo.update(todo_params)
+    redirect_to @todo
+  end
+
   def destroy
     @todo = Todo.find(params[:id])
     @todo.destroy
