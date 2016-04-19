@@ -33,8 +33,6 @@ class TodosController < ApplicationController
     else
       render :new
     end
-
-    redirect_to @todo
   end
 
   def destroy
