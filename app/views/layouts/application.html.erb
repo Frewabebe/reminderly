@@ -12,7 +12,13 @@
     <h3><a href="javascript:history.back()">Back</a></h3>
   </nav>
 
-<%= yield %>
+  <% flash.each do |type, message| %>
+    <p class="flash <%= type %>">
+      <%= message %>
+    </p>
+  <% end %>
+
+  <%= yield %>
 
   <footer>
     Get stuff done!

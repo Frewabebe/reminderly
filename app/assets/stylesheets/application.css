@@ -85,3 +85,22 @@ footer {
   margin: 0 50%;
 
 }
+
+
+
+.flash {
+  padding: 1em;
+  border: 2px solid black;
+  width: 50%;
+  margin: 1em auto;
+}
+
+.alert {
+  background-color: red;
+  color: white;
+}
+
+.notice {
+  background-color: blue;
+  color: white;
+}

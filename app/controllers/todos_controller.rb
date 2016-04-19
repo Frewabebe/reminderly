@@ -16,7 +16,8 @@ class TodosController < ApplicationController
     @todo = Todo.new(todo_params)
     @todo.completed = false
     @todo.save
-    redirect_to @todo
+
+    redirect_to @todo, notice: "Todo successfully created!"
   end
 
   def edit
@@ -32,7 +33,8 @@ class TodosController < ApplicationController
   def destroy
     @todo = Todo.find(params[:id])
     @todo.destroy
-    redirect_to todos_path
+
+    redirect_to todos_path, notice: "Todo Sucessfully Destroyed"
   end
 
   def incomplete
