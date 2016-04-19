@@ -15,8 +15,11 @@ class TodosController < ApplicationController
   def create
     @todo = Todo.new(todo_params)
     @todo.completed = false
-    @todo.save
-    redirect_to @todo
+    if @todo.save
+      redirect_to @todo, notice: "Todo was successfully saved."
+    else
+      render :new
+    end
   end
 
   def edit
@@ -25,7 +28,12 @@ class TodosController < ApplicationController
 
   def update
     @todo = Todo.find(params[:id])
-    @todo.update(todo_params)
+    if @todo.update(todo_params)
+      redirect_to @todo, notice: "Todo was successfully updated."
+    else
+      render :new
+    end
+
     redirect_to @todo
   end
 

@@ -1,4 +1,13 @@
 <%= form_for @todo do |f| %>
+  <div id="error_explanation">
+    <ul>
+      <h2>Errors:</h2>
+      <% @todo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+
   <%= f.label :body %>
   <%= f.text_field :body %>
   <%= f.label :author %>
