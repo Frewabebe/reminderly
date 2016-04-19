@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav>
+    <h3><a href="/todos">Todos</a></h3>
+    <h3><a href="javascript:history.back()">Back</a></h3>
+  </nav>
 
 <%= yield %>
+
+  <footer>
+    Get stuff done!
+  </footer>
 
 </body>
 </html>

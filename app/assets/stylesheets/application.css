@@ -78,3 +78,10 @@ nav h3 {
   display: inline-block;
   padding: 0 20px;
 }
+
+footer {
+  position: absolute;
+  top: 90vh;
+  margin: 0 50%;
+
+}
