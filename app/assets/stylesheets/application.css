@@ -43,6 +43,7 @@ a:hover {
   margin: 1em auto;
   width: 75%;
   padding: .5em;
+  background: rgba(0,0,0, .3);
 }
 
 .todo a {
