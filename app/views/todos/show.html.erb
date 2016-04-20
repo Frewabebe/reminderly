@@ -1,5 +1,6 @@
-<h2><%= link_to "All Todos", todos_path %></h2>
-<p><%= @todo.body %><p>
-<p><%= @todo.author %></p>
+<div class="todo">   
+  <p><%= @todo.body %><p>
+  <p><%= @todo.author %></p>
 
-<%= link_to "Edit", edit_todo_path %>
+  <%= link_to "Edit", edit_todo_path %>
+</div>

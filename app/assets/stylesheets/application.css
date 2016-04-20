@@ -43,8 +43,16 @@ p a {
   line-height: 3em;
 }
 
+.todo {
+  width: 75%;
+  margin: 1em auto;
+  padding: 2em;
+  border: solid 1px white;
+  background: #aaa;
+}
+
 ul {
-  border: 0.5px solid rgb(236, 236, 236);
+  border: 1px solid rgb(236, 236, 236);
   width: 40%;
   margin: 0 auto;
   padding: 40px 0;

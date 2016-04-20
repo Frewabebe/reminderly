@@ -1,6 +1,9 @@
-<p>
-  <%= link_to todo.body, todo_path(todo) %> |
-  <%= link_to "Delete this todo", todo_path(todo),
-     method: :delete %> |
-  <%= link_to "Edit", edit_todo_path(todo) %>
-</p>
+<div class="todo">
+  <%= link_to todo.body, todo_path(todo) %>
+  <% if todo.completed %>
+    <%= link_to "Delete this todo", todo_path(todo), method: :delete %>
+  <% else  %>
+    <%= link_to "Mark as Completed", mark_completed_todo_path(todo), method: :put %>
+    <%= link_to "Edit", edit_todo_path(todo) %>
+  <% end  %>
+</div>

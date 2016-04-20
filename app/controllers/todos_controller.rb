@@ -3,9 +3,21 @@ class TodosController < ApplicationController
     @todos = Todo.all
   end
 
+  def incomplete
+    @todos = Todo.where(completed: false)
+    render :index
+  end
+
   def show
     @todo = Todo.find(params[:id])
     @todos = Todo.all
+  end
+
+  def mark_completed
+    @todo = Todo.find(params[:id])
+    @todo.update(completed: true)
+
+    redirect_to incomplete_todos_path, notice: "Marked Todo Complete"
   end
 
   def new
@@ -39,10 +51,6 @@ class TodosController < ApplicationController
     @todo = Todo.find(params[:id])
     @todo.destroy
     redirect_to todos_path
-  end
-
-  def incomplete
-    @incomplete_todos = Todo.where(completed: false)
   end
 
   private
