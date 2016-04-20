@@ -45,6 +45,13 @@ class TodosController < ApplicationController
     @incomplete_todos = Todo.where(completed: false)
   end
 
+  def mark_complete
+    @todo = Todo.find(params[:id])
+    @todo.update(completed: true)
+
+    redirect_to incomplete_todos_path
+  end
+
   private
   def todo_params
     params.require(:todo).permit(:body, :author)

@@ -10,9 +10,13 @@
     <%= link_to "Delete this todo", todo_path(todo),
                     method: :delete,
                     data: {confirm: "Are you sure?"} %>
-    <%= link_to "Mark Complete",
+
+    <% unless todo.completed %>
+      <%= link_to "Mark Complete",
                     mark_complete_todo_path(todo),
                     method: :put %>
+    <% end %>
+
     <%= link_to "Edit", edit_todo_path(todo) %>
   </div>
 </div>

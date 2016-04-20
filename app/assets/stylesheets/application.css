@@ -49,21 +49,21 @@ a:hover {
 .todo a {
   margin: 1em 0;
   line-height: 1em;
+  display: block;
 }
 
 .todo div {
+  width: 30%;
   display: inline-block;
   margin-right: 1em;
   padding: 1em;
   border-right: 1px solid tomato;
+  vertical-align: top;
+  min-height: 10em;
 }
 
 .todo .actions {
   border: none;
-}
-
-.actions a {
-  display: block;
 }
 
 ul {
@@ -103,8 +103,7 @@ nav h3 {
 }
 
 footer {
-  position: absolute;
-  top: 90vh;
-  margin: 0 50%;
-
+  margin: 1em;
+  padding: 2em;
+  border-top: 5px solid white;
 }
