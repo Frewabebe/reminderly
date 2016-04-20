@@ -38,7 +38,14 @@ a:hover {
   color: white;
 }
 
-p a {
+.todo {
+  border: 1px solid white;
+  margin: 1em auto;
+  width: 75%;
+  padding: .5em;
+}
+
+.todo a {
   margin: 1em 0;
   line-height: 3em;
 }

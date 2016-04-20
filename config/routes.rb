@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # get 'todos' => 'todos#index'
+  root to: "todos#index"
   get 'incomplete' => 'todos#incomplete'
 
   resources :todos
