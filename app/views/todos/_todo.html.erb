@@ -1,7 +1,15 @@
 <div class="todo">
-  <%= link_to todo.body, todo_path(todo) %> |
-  <%= link_to "Delete this todo", todo_path(todo),
-                                  method: :delete,
-                                  data: {confirm: "Are you sure?"} %> |
-  <%= link_to "Edit", edit_todo_path(todo) %>
+  <div class="description">
+    <%= link_to todo.body, todo_path(todo) %>
+    <p>
+      <%= "by #{todo.author}" %>
+    </p>
+  </div>
+
+  <div class="actions">
+    <%= link_to "Delete this todo", todo_path(todo),
+                                    method: :delete,
+                                    data: {confirm: "Are you sure?"} %>
+    <%= link_to "Edit", edit_todo_path(todo) %>
+  </div>
 </div>

@@ -47,7 +47,22 @@ a:hover {
 
 .todo a {
   margin: 1em 0;
-  line-height: 3em;
+  line-height: 1em;
+}
+
+.todo div {
+  display: inline-block;
+  margin-right: 1em;
+  padding: 1em;
+  border-right: 1px solid tomato;
+}
+
+.todo .actions {
+  border: none;
+}
+
+.actions a {
+  display: block;
 }
 
 ul {
