@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Todo.destroy_all
 Todo.create([
-  {body: "finish WDI", author: "author1", completed: false},
-  {body: "Get a job", author: "author2", completed: false},
-  {body: "learn rails", author: "author3", completed: true},
-  {body: "learn jQuery", author: "author4", completed: true}
+  {body: "finish WDI", author_first_name: "John", author_last_name: "Smith", completed: false},
+  {body: "Get a job", author_first_name: "Bill", author_last_name: "Jones", completed: false},
+  {body: "learn rails", author_first_name: "John", author_last_name: "Smith", completed: true},
+  {body: "learn jQuery", author_first_name: "Amy", author_last_name: "Davis", completed: true}
   ])
