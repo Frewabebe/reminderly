@@ -6,7 +6,7 @@ RSpec.describe Todo, type: :model do
     todo = Todo.create!(body: "finish WDI", author_first_name: "John", author_last_name: "Smith", completed: false)
   end
 
-  describe "index page has ", :type => :feature do
+  describe "index contents", :type => :feature do
     it "lists top label" do
       visit '/'
       expect(page).to have_content('All Todos')
