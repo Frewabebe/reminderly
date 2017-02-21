@@ -5,6 +5,7 @@ class TodosController < ApplicationController
 
   def show
     @todo = Todo.find(params[:id])
+    @todos = Todo.all
   end
 
   def new
@@ -15,6 +16,16 @@ class TodosController < ApplicationController
     @todo = Todo.new(todo_params)
     @todo.completed = false
     @todo.save
+    redirect_to @todo
+  end
+
+  def edit
+    @todo = Todo.find(params[:id])
+  end
+
+  def update
+    @todo = Todo.find(params[:id])
+    @todo.update(todo_params)
     redirect_to @todo
   end
 
